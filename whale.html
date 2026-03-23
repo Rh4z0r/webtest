@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello whaler!</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            background-color: #f0f2f5;
+            padding-top: 50px;
+            color: #2c3e50;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #7f8c8d;
+            font-size: 1.1em;
+        }
+
+        /* --- Hier beginnt das witzige Testbild --- */
+        .testbild-container {
+            margin: 50px auto;
+            width: 300px;
+            height: 300px;
+            background-color: #3498db; /* Docker Blau */
+            border-radius: 50%; /* Rundes Selfie */
+            border: 10px solid white;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden; /* Damit der Wal nicht ausbricht */
+            transition: transform 0.3s ease;
+        }
+
+        .testbild-container:hover {
+            transform: scale(1.05) rotate(5deg); /* Kleiner Wackeleffekt */
+        }
+
+        /* Der Wal-Körper */
+        .wal-body {
+            width: 150px;
+            height: 100px;
+            background-color: #fff;
+            border-radius: 50% 50% 10px 10px;
+            position: absolute;
+            bottom: 30px;
+            left: 75px;
+        }
+
+        /* Die Augen */
+        .auge {
+            width: 15px;
+            height: 15px;
+            background-color: #2c3e50;
+            border-radius: 50%;
+            position: absolute;
+            top: 30px;
+        }
+        .auge.links { left: 35px; }
+        .auge.rechts { right: 35px; }
+
+        /* Das Lächeln */
+        .mund {
+            width: 60px;
+            height: 20px;
+            border: 5px solid #2c3e50;
+            border-top: none;
+            border-radius: 0 0 30px 30px;
+            position: absolute;
+            top: 55px;
+            left: 45px;
+        }
+
+        /* Die Wasserfontäne */
+        .fontaene {
+            width: 10px;
+            height: 30px;
+            background-color: #aadbff;
+            position: absolute;
+            top: -25px;
+            left: 70px;
+            border-radius: 5px;
+            animation: spritz 1s infinite;
+        }
+
+        @keyframes spritz {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Sprechblase */
+        .sprechblase {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 15px;
+            font-weight: bold;
+            font-size: 0.9em;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        /* --- Ende des Testbild-Codes --- */
+
+    </style>
+</head>
+<body>
+    <h1>Der Herr der Tiefe 🎉</h1>
+    <p>In tiefem Blau, so still und weit,<br>
+zieht er dahin durch Raum und Zeit.<br>
+Ein Berg aus Fleisch, ein Herz so groß,<br>
+im weiten, wilden Meereschoß.<br>
+<br>
+Sein Lied erklingt wie Geisterhauch,<br>
+ein tiefes Dröhnen im Meeresbauch.<br>
+Er singt von fernen, kalten Welten,<br>
+wo nur die stillen Wunder gelten.<br>
+<br
+Dann taucht er auf mit Macht und Pracht,<br>
+ein Silberrücken in der Nacht.<br
+Ein Atemstoß, ein Wasserstrahl,<br>
+so frei und stolz – das ist der Wal.</p>
+    
+    <div class="testbild-container">
+        <div class="fontaene"></div>
+        <div class="wal-body">
+            <div class="auge links"></div>
+            <div class="auge rechts"></div>
+            <div class="mund"></div>
+        </div>
+        <div class="sprechblase">Servus! 👋</div>
+    </div>
+
+</body>
+</html>
